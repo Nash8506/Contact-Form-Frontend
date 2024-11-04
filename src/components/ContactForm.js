@@ -38,7 +38,7 @@ function ContactForm() {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("process.env.REACT_APP_API_URL", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
